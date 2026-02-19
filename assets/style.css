@@ -1,0 +1,146 @@
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.all-minwidth {
+    min-height: 100%;
+    margin-bottom: 100px;
+}
+.card {
+    margin: 40px;
+    height: 150px;
+}
+
+.card-p {
+    padding: 15px;
+}
+.card-subheader {
+    flex: 1,
+}
+
+.in {
+    display: inline;
+}
+
+.intro-lyt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.intro-not-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.intro-pie {
+    max-width: 500px;
+    margin-right: 30px;
+
+}
+
+.nav-hamburger {
+    margin: 50px 0 0 50px;
+}
+
+.nav-header {
+    margin-top: 50px;
+}
+
+.overview-lyt {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.overview-p {
+    padding-top: 50px;
+}
+
+.overview-txt {
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    padding-right: 50px;
+    max-width: 40%;
+}
+
+.p-pb {
+    padding-bottom: 25px;
+}
+
+.rec-all {
+    margin-right: auto;
+    margin-left: auto;
+    width: 828px;
+}
+
+.rec-tit {
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.res-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.res-main {
+    width: 150px;
+    height: 150px;
+    margin: 30px 30px 50px 30px;
+
+}
+
+.res-outer {
+    display: flex;
+    justify-content: center;
+}
+
+.slice-bottomhalf {
+    display: flex;
+    justify-content: center;
+    margin: 0 30px 0 30px;
+}
+
+.slice-bh-left {
+    margin: 30px 15px 50px 0;
+}
+
+.slice-bh-right {
+    margin: 30px 0 50px 15px;
+    display: flex;
+    flex-grow: 1;
+}
+
+.slice-tophalf {
+    margin: 0 30px 0 30px;
+}
+
+.z-bottomhalf {
+    margin: 30px 30px 0px 30px;
+}
+
+.z-th-left {
+    margin: 0 15px 0 0;
+    width: 400px
+}
+
+.z-th-right {
+    margin: 0 0 0 15px;
+    width: 400px
+}
+
+.z-tophalf {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 30px 30px 30px;
+}
