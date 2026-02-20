@@ -10,7 +10,7 @@ def result(passed):
                 [
                     html.Div(
                         [
-                            dmc.Text("Passed" if passed else "Failed"),
+                            dmc.Text("Passed" if passed else "Failed", fw=700),
                             DashIconify(
                                 icon=(
                                     "mdi-check-circle" if passed else "mdi-close-circle"

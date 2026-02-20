@@ -10,10 +10,10 @@ from components.result import result
 
 text_lst = [
     """
-    The sign test calculates how many "wins" were observed in each group, per unit of time (in this case, days). So, how many days did treatment win vs control?
+    The sign test calculates how many "wins" were observed in each variant. This is analyze per unit of time; in this case, the time dimension is in days. So, how many days did the control have a better mean conversion rate than the test?
     """,
     """
-    The below chart shows treatment wins colored in green, and contorl wins colored in red. In total, treatment exceeded control 7 times, and control exceeded treatment 16 times.
+    The below chart shows test wins colored in green, and contorl wins colored in red. In total, treatment exceeded control 7 times, and control exceeded treatment 16 times. Again, we see that the test performed worse -- though not significantly so.
     """,
 ]
 

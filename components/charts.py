@@ -10,34 +10,6 @@ from statsmodels.stats.proportion import confint_proportions_2indep
 from components.data import online, permutation_df
 
 
-def intro_pie(tests_passed, tests_failed):
-
-    v1 = tests_passed
-    v2 = tests_failed
-
-    return (
-        px.pie(
-            values=[v1, v2],
-            names=["Passed", "Failed"],
-            hole=0.6,
-            color_discrete_sequence=["#c92a2a", "#2b8a3e"],
-        )
-        .update_traces(textposition="inside", texttemplate="%{percent}")
-        .add_annotation(
-            {
-                "text": f"{(v1/(v1+v2))*100:.0f}%",
-                "x": 0.5,
-                "y": 0.5,
-                "font": {"size": 20, "color": "black"},
-                "showarrow": False,
-                "xref": "paper",
-                "yref": "paper",
-            }
-        )
-        .update_layout({"title": {"text": f"{(v1/(v1+v2))*100:.0f}% of tests passed"}})
-    )
-
-
 def intro_gauge():
 
     control_rate = online.query("group == 'control'")["converted"].mean()
@@ -55,7 +27,6 @@ def intro_gauge():
                 mode="gauge+number+delta",
                 value=relative_lift_pct,
                 number={"font": {"size": 12, "color": "white"}},
-                # title={"text": "Relative lift vs threshold", "font": {"size": 24}},
                 gauge={
                     "bar": {"color": "#1616a7"},
                     "axis": {"range": [-10, 20], "ticksuffix": "%"},
@@ -305,7 +276,7 @@ def z_test():
     # Add observed z-statistic
     fig.add_vline(
         x=z_stat,
-        line_color="#c92a2a",
+        line_color="red",
         line_width=3,
         annotation_text=f"Observed Z = {z_stat:.3f}",
     ).add_vline(
@@ -403,7 +374,7 @@ def ci_chart():
             x=[ci_low, observed_diff, ci_high],
             y=[0, 0, 0],
             mode="lines+markers",
-            line=dict(color="#c92a2a", width=3, dash="dash"),
+            line=dict(color="red", width=3, dash="dash"),
             marker=dict(size=10),
             name="95% CI",
             showlegend=False,
@@ -580,7 +551,7 @@ def permutation_test():
     # Add observed difference
     fig.add_vline(
         x=observed_diff,
-        line_color="#c92a2a",
+        line_color="red",
         line_width=3,
         annotation_text=f"Observed: {observed_diff:.4f}",
     ).add_vline(

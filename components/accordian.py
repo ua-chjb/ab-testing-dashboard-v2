@@ -24,7 +24,7 @@ def accordion_hidden(header, passed_failed, color):
 def accordion_displayed(text):
     if isinstance(text, list):
         return dmc.AccordionPanel(
-            dmc.Stack([dmc.Text(t, size="sm") for t in text], gap="xs")
+            dmc.List([dmc.ListItem(dmc.Text(t, size="sm")) for t in text])
         )
     return dmc.AccordionPanel(dmc.Text(text, size="sm"))
 

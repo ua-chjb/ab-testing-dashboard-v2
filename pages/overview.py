@@ -5,17 +5,16 @@ progress = html.Div(
     [
         html.Div(
             [
-                dmc.Text("A/B test process", fw=700, c="black"),
+                dmc.Text("Landing page: A/B testing", fw=700, c="black"),
                 dmc.Text("Step 5: statistical analysis of results", c="gray"),
                 dmc.Text(
                     """
-                This dashboard provides an interactive look at the A/B test recently run on Udacity, 
-                from 1/2/2017 - 1/24/2017, over a period of 22 days, and tracked the actions of 290,584 
-                unique users. The effect size was -0.001578%, meaning the conversion rate for the treatment 
-                group was 0.16% worse than the conversion rate for the control group. Generally, this test 
-                recommends not moving forward with implementation; specifically, the treatment group performed
-                worse across 4/4 statistical tests, yet the results were not statistically significant. More detail
-                can be found on further pages.
+                This dashboard provides an interactive look at a simulated dataset of a landing page. Run over
+                a period of 22 days, with two versions (new, control), there was not a statistically significant
+                difference between the two groups. Furthermore, this analysis determined the conversion rate actually
+                decreased with the new variant, with an effect size of -0.1578%. Generally, this analysis 
+                recommends not moving forward with implementation; more specifically, it is also recommended to
+                not engage in further testing without first adjusting the variant in question.
                 """,
                     c="black",
                     className="overview-p",
@@ -35,7 +34,7 @@ progress = html.Div(
                     children=[dmc.Text("Historical analysis", size="sm", c="dimmed")],
                 ),
                 dmc.TimelineItem(
-                    title="Business alignment",
+                    title="Business impact",
                     bullet=dmc.Text(2, p=10, fw=500),
                     children=[
                         dmc.Text("Potential impact on revenue", size="sm", c="dimmed")
@@ -55,6 +54,11 @@ progress = html.Div(
                     title="Statistical analysis",
                     bullet=dmc.Text(5, p=10, fw=500),
                     children=[dmc.Text("Analyze results", size="sm", c="dimmed")],
+                ),
+                dmc.TimelineItem(
+                    title="Implementation",
+                    bullet=dmc.Text(6, p=10, fw=500),
+                    children=[dmc.Text("Implement new feature", size="sm", c="dimmed")],
                 ),
             ],
         ),

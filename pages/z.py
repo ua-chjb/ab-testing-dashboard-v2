@@ -10,10 +10,13 @@ from components.result import result
 
 text_lst = [
     """
-    The standard test for a binomial distribution is the two-proportions z-test. It is applied here with the parameters above. In addition, several assumptions need to be met, which are detailed below.
+    The standard test for a binomial distribution is the two-proportions z-test. It is applied here with the parameters above. In addition, several assumptions need to be met, which are detailed to the right.
     """,
     """
-    In the null hypothesis, we would expect the difference to be within 1.96 standard deviations away from 0. The observed z-statistic is -1.311. The fact that it is negative states that the new test actually performed worse than the new test; the fact that it is within [-1.96, 1.96] states that the result is not statistically significant.
+    In the null hypothesis assumes the difference is zero. We would expect the difference to be within 1.96 standard deviations of the null -- if the difference is less than that, we cannot reject the null hypothesis. Because the observed z-statistic is -1.311, we fail to reject the null, and conclude there is not a statistically significant difference between the two groups.
+    """,
+    """
+    Furthermore, the fact that the test statistic is negative tells us that the new test actually performed worse than the control variant.
     """,
 ]
 

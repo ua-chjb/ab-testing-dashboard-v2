@@ -10,7 +10,7 @@ from components.result import result
 
 text_lst = [
     """
-    The permutation test is similar to bootstrapping. It puts the control and treatment data in one basket, then randomly samples (without replacement) from this basket, and calculates the number of times a result is at least as extreme as when the data were separated.
+    The permutation test is similar to bootstrapping. It puts the control and treatment data in one basket, then randomly samples from this basket, without replacement, and calculates the number of times a result is at least as extreme as the initial means observed.
     """,
     """
     In this simulation, the permutation test was run 10,000 times.

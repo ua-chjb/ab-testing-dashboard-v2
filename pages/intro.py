@@ -40,14 +40,14 @@ intro = html.Div(
                             "ci",
                             "Confidence interval",
                             "Failed",
-                            "CI: [-0.0039, 0.0008]",
+                            ["CI: [-0.0039, 0.0008]"],
                         ),
                         full_accordion(
                             "sign",
                             "Sign test",
                             "Failed",
                             [
-                                "Binomial sign test statistic = 0.3043",
+                                "Binomial sign statistic = 0.3043",
                                 "P-value = 0.0931",
                             ],
                         ),

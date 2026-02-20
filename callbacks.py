@@ -7,6 +7,14 @@ from components.content import content_map, headers_map
 
 def switchboard(app):
     @app.callback(
+        Output("url", "href"),
+        Input("logout_button_IN", "n_clicks"),
+        prevent_initial_call=True,
+    )
+    def logout(n_clicks):
+        return "/logout"
+
+    @app.callback(
         Output("drawer_OUT", "opened"),
         Input("drawer_IN", "n_clicks"),
         State("drawer_OUT", "opened"),

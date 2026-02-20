@@ -10,10 +10,13 @@ from components.result import result
 
 text_lst = [
     """
-    The confidence interval is another standard measure to determine how likely one sample is to contain the mean of another sample.
+    The confidence interval is another standard measure of difference.
     """,
     """
-    There are three things to look for: 1. does the confidence interval intersect with zero? If so, there is no significant difference between the two samples, and the test fails. 2. Is the observed difference to the left or the right of zero? This calculation uses (new - old), so if the difference is positive, the experiment was an improvement; if the difference is negative, the experiment performed worse. Finally, 3. are both the observed difference and the confidence interval beyond the practical significance threshold? This will tell you if the experiment performed well enough to justify the operational costs of implementation.
+    The first thing to check is: does the confidence interval contain zero? If so, there is no significant difference between the two samples, and the test fails. That is what happens here. Additionally, as we saw in our two-proportions z-test, the observed difference was negative, indicating the new variant performed worse than the control. 
+    """,
+    """
+    The final aspect to analyze -- although it does not apply here, as our confidence interval contained zero -- is whether or not the CI was beyond the bounds of our practical significance threshold. This tells you if the experiment performed well enough to justify the operational costs of implementation.
     """,
 ]
 

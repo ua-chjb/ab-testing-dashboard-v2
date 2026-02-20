@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Sign up</h1>
+
+<form method="POST" novalidate>
+  {{ form.hidden_tag() }}
+
+  <div class="form-section">
+    {{ form.username.label(class="form-label") }} {{
+    form.username(class="form-input" + (" error" if form.username.errors else
+    "")) }} {% for error in form.username.errors %}
+    <div class="error-msg">{{ error }}</div>
+    {% endfor %}
+  </div>
+
+  <div class="form-section">
+    {{ form.password.label(text="Password", class="form-label") }} {{
+    form.password(class="form-input" + (" error" if form.password.errors else
+    ""), type="password") }} {% for error in form.password.errors %}
+    <div class="error-msg">{{ error }}</div>
+    {% endfor %}
+  </div>
+
+  <div class="form-section">
+    {{ form.confirm_password.label(text="Confirm password", class="form-label")
+    }} {{ form.confirm_password(class="form-input" + (" error" if
+    form.confirm_password.errors else ""), type="password") }} {% for error in
+    form.confirm_password.errors %}
+    <div class="error-msg">{{ error }}</div>
+    {% endfor %}
+  </div>
+
+  {{ form.submit(class="submit-btn") }}
+</form>
+
+<div class="alt-link">Already have an account? <a href="/login">Log in</a></div>
+
+{% endblock %}
