@@ -46,4 +46,4 @@ def require_login():
 
 if __name__ == "__main__":
     # app.run(debug=True, port="8050")  # for local development
-    app.run()  # for EC2 instance
+    app.run(port=8050)  # for EC2 instance
